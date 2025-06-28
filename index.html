@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Skin</h1>
+    <h1>SKIN</h1>
     <nav>
       <ul>
         <li><a href="#home">Inicio</a></li>
@@ -18,6 +18,14 @@
       </ul>
     </nav>
   </header>
+<section class="galeria-inicio">
+  
+  <img src="emi.jpg" alt="Tratamiento 2">
+  <img src="facial-blanco.jpg" alt="Facial blanco">
+  <img src="maysol.jpg" alt="Maysol">
+  <img src="mascarilla.jpg" alt="Mascarilla">
+
+</section>
 
   <main>
 
@@ -29,10 +37,9 @@
       <div class="descripcion">
        <section id="que-es-skin">
   <div class="contenedor-skin">
-   
-      <h2>¿Qué es Skin?</h2>
-      <p><strong>Skin</strong> es un gimnasio facial con tecnología avanzada.</p>
-      <ul>
+   <section class="container">
+        <h2>¿Qué es Skin?</h2>
+      
         <li>Entrenamos más de 43 músculos del rostro y cuello.</li>
         <li>Aplicamos técnicas profesionales y efectivas.</li>
         <li>Mejora la flacidez, arrugas y la tonicidad muscular.</li>
@@ -72,6 +79,37 @@
       <img src="microneedling.jpg" alt="Microneedling con PDRN de salmón" />
       <p>Microneedling con PDRN de salmón</p>
     </div>
+    <section id="entrenamientos" class="entrenamientos">
+  <h2>Información</h2>
+
+  <div class="acordeon">
+    <button class="acordeon-titulo">Limpieza Facial</button>
+    <div class="acordeon-contenido">
+      Limpieza profunda que elimina impurezas, células muertas y exceso de grasa, dejando la piel renovada.
+    </div>
+
+    <button class="acordeon-titulo">Hidratación Profunda</button>
+    <div class="acordeon-contenido">
+      Tratamiento intensivo que restaura los niveles de agua en la piel, mejorando su textura y luminosidad.
+    </div>
+
+    <button class="acordeon-titulo">Oxigenoterapia</button>
+    <div class="acordeon-contenido">
+      Técnica que introduce oxígeno puro en la piel para revitalizarla y estimular la producción de colágeno.
+    </div>
+
+    <button class="acordeon-titulo">Oxygeneo Renovación Celular</button>
+    <div class="acordeon-contenido">
+      Combinación de exfoliación, oxigenación e infusión de nutrientes para una piel más firme y luminosa.
+    </div>
+
+    <button class="acordeon-titulo">Microneedling con PDRN de Salmón</button>
+    <div class="acordeon-contenido">
+      Estimula la regeneración celular con microagujas y ácido PDRN derivado del ADN de salmón, ideal para rejuvenecimiento.
+    </div>
+  </div>
+</section>
+
   </div>
 </section>
 
@@ -193,5 +231,27 @@
   <footer>
     <p>&copy; 2025 Skin - Gimnasio Facial</p>
   </footer>
+  <script>
+  const titulos = document.querySelectorAll(".acordeon-titulo");
+
+  titulos.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const contenido = btn.nextElementSibling;
+      const isOpen = contenido.style.maxHeight;
+
+      // Cierra todos los abiertos
+      document.querySelectorAll(".acordeon-contenido").forEach((el) => {
+        el.style.maxHeight = null;
+      });
+
+      // Si no estaba abierto, abre este
+      if (!isOpen) {
+        contenido.style.maxHeight = contenido.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>

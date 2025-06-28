@@ -7,21 +7,33 @@
 
 body {
   font-family: 'Archivo', sans-serif;
-  background-color: #ffebf5;
+  background-color: #cc91af;
   color: #333;
   line-height: 1.6;
 }
 
+header 
+ header h1 {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 10em;
+  font-weight: 2000;
+  color: white;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
 header {
-  background-color: #70a87e;
-  padding: 20px 0;
+  background-color: #448053;
+  padding: 30px 0; /* o incluso 40px si lo querés más aireado */
   text-align: center;
 }
 
+
 header h1 {
   font-family: 'Gilroy', sans-serif;
-  font-size: 2.8em;
-  color: white;
+  font-size: 10em;
+  color: rgb(255, 220, 237);
 }
 
 nav ul {
@@ -138,7 +150,7 @@ h2 {
 }
 
 .formulario button {
-  background-color: #a8858d;
+  background-color: #4b6a52;
   color: white;
   border: none;
   padding: 12px;
@@ -161,7 +173,7 @@ footer {
 }
 .hero .btn {
   display: inline-block;
-  background-color: #a8858d;
+  background-color: #3d7458;
   color: #fff;
   padding: 10px 20px;
   margin: 10px 10px 0 0;
@@ -254,7 +266,7 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   font-size: 18px;
-  color: #4a3b3f;
+  color: #3d7458;
   line-height: 1.6;
 }
 
@@ -275,7 +287,7 @@ footer {
 }
 
 .links-skin a {
-  color: #7c5c63;
+  color: #3d7458;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -370,3 +382,118 @@ footer {
   max-width: 100%;
   border-radius: 10px;
 }
+/* Estilos para pantallas de celular */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header, nav, main, footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card, .section, .container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .boton {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .mapa-facial, .instrumentos {
+    flex-direction: column;
+  }
+
+  .instrumentos img {
+    width: 80%;
+    margin: auto;
+  }
+}
+.acordeon button.acordeon-titulo {
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.acordeon button.acordeon-titulo:hover {
+  background-color: #539965;
+}
+
+.acordeon-contenido {
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background-color: #213b2d;
+  border-left: 3px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+}
+body {
+  font-family: 'Archivo', sans-serif;
+  background-color: #ffebf5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Envuelve toda la página para que tenga márgenes laterales cómodos */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px;
+}
+.galeria-inicio {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 20px;
+  gap: 8px;
+  background-color: #fce6ef;
+  scroll-snap-type: x mandatory;
+}
+
+.galeria-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: nowrap;
+}
+
+.galeria-inicio img {
+  height: 160px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-inicio img:hover {
+  transform: scale(1.05);
+}
+
